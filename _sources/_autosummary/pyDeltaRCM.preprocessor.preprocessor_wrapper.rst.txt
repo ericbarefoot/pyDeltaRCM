@@ -1,0 +1,6 @@
+pyDeltaRCM.preprocessor.preprocessor\_wrapper
+=============================================
+
+.. currentmodule:: pyDeltaRCM.preprocessor
+
+.. autofunction:: preprocessor_wrapper
