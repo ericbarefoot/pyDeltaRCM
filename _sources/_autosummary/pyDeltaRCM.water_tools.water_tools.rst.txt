@@ -16,10 +16,10 @@ pyDeltaRCM.water\_tools.water\_tools
       ~water_tools.build_weight_array
       ~water_tools.check_for_boundary
       ~water_tools.check_size_of_indices_matrix
+      ~water_tools.compute_free_surface
+      ~water_tools.finalize_free_surface
       ~water_tools.finalize_water_iteration
       ~water_tools.flooding_correction
-      ~water_tools.free_surf
-      ~water_tools.get_new_cell
       ~water_tools.get_water_weight_array
       ~water_tools.get_wet_mask_nh
       ~water_tools.init_water_iteration
@@ -27,7 +27,6 @@ pyDeltaRCM.water\_tools.water\_tools
       ~water_tools.update_Q
       ~water_tools.update_flow_field
       ~water_tools.update_velocity_field
-      ~water_tools.update_water
    
    
 

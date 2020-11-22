@@ -13,16 +13,10 @@ pyDeltaRCM.sed\_tools.sed\_tools
 
    .. autosummary::
    
-      ~sed_tools.deposit
-      ~sed_tools.erode
-      ~sed_tools.mud_dep_ero
-      ~sed_tools.mud_route
-      ~sed_tools.sand_dep_ero
-      ~sed_tools.sand_route
-      ~sed_tools.sed_parcel
+      ~sed_tools.route_all_mud_parcels
+      ~sed_tools.route_all_sand_parcels
       ~sed_tools.sed_route
       ~sed_tools.topo_diffusion
-      ~sed_tools.update_u
    
    
 

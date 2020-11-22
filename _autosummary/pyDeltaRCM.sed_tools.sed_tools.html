@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="shared_tools" href="../reference/shared_tools/index.html" />
+    <link rel="next" title="pyDeltaRCM.sed_tools.SandRouter" href="pyDeltaRCM.sed_tools.SandRouter.html" />
     <link rel="prev" title="sed_tools" href="../reference/sed_tools/index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,10 +26,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="../reference/shared_tools/index.html" title="shared_tools"
+          <a href="pyDeltaRCM.sed_tools.SandRouter.html" title="pyDeltaRCM.sed_tools.SandRouter"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../reference/sed_tools/index.html" title="sed_tools"
@@ -45,8 +42,8 @@
   <p class="topless"><a href="../reference/sed_tools/index.html"
                         title="previous chapter">sed_tools</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../reference/shared_tools/index.html"
-                        title="next chapter">shared_tools</a></p>
+  <p class="topless"><a href="pyDeltaRCM.sed_tools.SandRouter.html"
+                        title="next chapter">pyDeltaRCM.sed_tools.SandRouter</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -90,90 +87,44 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.deposit" title="pyDeltaRCM.sed_tools.sed_tools.deposit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deposit</span></code></a>(Vp_dep, px, py)</p></td>
-<td><p>Deposit sand or mud.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.erode" title="pyDeltaRCM.sed_tools.sed_tools.erode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">erode</span></code></a>(Vp_ero, px, py)</p></td>
-<td><p>Erode sand or mud.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.mud_dep_ero" title="pyDeltaRCM.sed_tools.sed_tools.mud_dep_ero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mud_dep_ero</span></code></a>(px, py)</p></td>
-<td><p>Decide if deposit or erode mud.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.mud_route" title="pyDeltaRCM.sed_tools.sed_tools.mud_route"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mud_route</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.route_all_mud_parcels" title="pyDeltaRCM.sed_tools.sed_tools.route_all_mud_parcels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">route_all_mud_parcels</span></code></a>()</p></td>
 <td><p>Route mud parcels.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.sand_dep_ero" title="pyDeltaRCM.sed_tools.sed_tools.sand_dep_ero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sand_dep_ero</span></code></a>(px, py)</p></td>
-<td><p>Decide if erode or deposit sand.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.sand_route" title="pyDeltaRCM.sed_tools.sed_tools.sand_route"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sand_route</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.route_all_sand_parcels" title="pyDeltaRCM.sed_tools.sed_tools.route_all_sand_parcels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">route_all_sand_parcels</span></code></a>()</p></td>
 <td><p>Route sand parcels; topo diffusion.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.sed_parcel" title="pyDeltaRCM.sed_tools.sed_tools.sed_parcel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sed_parcel</span></code></a>(theta_sed, sed, px, py)</p></td>
-<td><p>Route one sediment parcel.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.sed_route" title="pyDeltaRCM.sed_tools.sed_tools.sed_route"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sed_route</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.sed_route" title="pyDeltaRCM.sed_tools.sed_tools.sed_route"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sed_route</span></code></a>()</p></td>
 <td><p>Sediment routing main method.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.topo_diffusion" title="pyDeltaRCM.sed_tools.sed_tools.topo_diffusion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">topo_diffusion</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.topo_diffusion" title="pyDeltaRCM.sed_tools.sed_tools.topo_diffusion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">topo_diffusion</span></code></a>()</p></td>
 <td><p>Diffuse topography after routing.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.sed_tools.sed_tools.update_u" title="pyDeltaRCM.sed_tools.sed_tools.update_u"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_u</span></code></a>(px, py)</p></td>
-<td><p>Update velocity.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.deposit">
-<code class="descname">deposit</code><span class="sig-paren">(</span><em>Vp_dep</em>, <em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.deposit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Deposit sand or mud.</p>
-<p>Deposit sediment volume <cite>Vp_dep</cite>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>Vp_dep</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – Volume of sediment.</p></li>
-<li><p><strong>px</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>) – Index.</p></li>
-<li><p><strong>py</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>) – Index.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.erode">
-<code class="descname">erode</code><span class="sig-paren">(</span><em>Vp_ero</em>, <em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.erode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Erode sand or mud.</p>
-<p>Total sediment mass is preserved but individual categories
-of sand and mud are not.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.mud_dep_ero">
-<code class="descname">mud_dep_ero</code><span class="sig-paren">(</span><em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.mud_dep_ero" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decide if deposit or erode mud.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.mud_route">
-<code class="descname">mud_route</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.mud_route" title="Permalink to this definition">¶</a></dt>
+<dt id="pyDeltaRCM.sed_tools.sed_tools.route_all_mud_parcels">
+<code class="descname">route_all_mud_parcels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.route_all_mud_parcels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Route mud parcels.</p>
+<p>This method largely wraps the <a class="reference internal" href="pyDeltaRCM.sed_tools.MudRouter.html#pyDeltaRCM.sed_tools.MudRouter" title="pyDeltaRCM.sed_tools.MudRouter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MudRouter</span></code></a>. First, the number of
+parcels and sand fraction (<code class="xref py py-obj docutils literal notranslate"><span class="pre">f_bedload</span></code>) are used to determine
+starting locations for mud parcels. Next, these locations are sent to
+the <cite>MudRouter</cite>, along with many other model state variables.</p>
+<p>Finally, variables are unpacked from the <cite>MudRouter</cite> and updated in
+the model fields, where they are later used by the water parcel
+routing.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.sand_dep_ero">
-<code class="descname">sand_dep_ero</code><span class="sig-paren">(</span><em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.sand_dep_ero" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decide if erode or deposit sand.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.sand_route">
-<code class="descname">sand_route</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.sand_route" title="Permalink to this definition">¶</a></dt>
+<dt id="pyDeltaRCM.sed_tools.sed_tools.route_all_sand_parcels">
+<code class="descname">route_all_sand_parcels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.route_all_sand_parcels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Route sand parcels; topo diffusion.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.sed_parcel">
-<code class="descname">sed_parcel</code><span class="sig-paren">(</span><em>theta_sed</em>, <em>sed</em>, <em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.sed_parcel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Route one sediment parcel.</p>
+<p>This method largely wraps the <a class="reference internal" href="pyDeltaRCM.sed_tools.SandRouter.html#pyDeltaRCM.sed_tools.SandRouter" title="pyDeltaRCM.sed_tools.SandRouter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SandRouter</span></code></a>. First, the number of
+parcels and sand fraction (<code class="xref py py-obj docutils literal notranslate"><span class="pre">f_bedload</span></code>) are used to determine
+starting locations for sand parcels. Next, these locations are sent to
+the <cite>SandRouter</cite>, along with many other model state variables.</p>
+<p>Finally, variables are unpacked from the <cite>SandRouter</cite> and updated in
+the model fields, where they are later used by the <cite>MudRouter</cite> and the
+water parcel routing.</p>
 </dd></dl>
 
 <dl class="method">
@@ -194,13 +145,6 @@ and then adds this different to the current eta to do the smoothing.
 The operation is repeated <cite>N_crossdiff</cite> times.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="pyDeltaRCM.sed_tools.sed_tools.update_u">
-<code class="descname">update_u</code><span class="sig-paren">(</span><em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.sed_tools.sed_tools.update_u" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update velocity.</p>
-<p>Update velocities after erosion or deposition.</p>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -218,10 +162,7 @@ The operation is repeated <cite>N_crossdiff</cite> times.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="../reference/shared_tools/index.html" title="shared_tools"
+          <a href="pyDeltaRCM.sed_tools.SandRouter.html" title="pyDeltaRCM.sed_tools.SandRouter"
              >next</a> |</li>
         <li class="right" >
           <a href="../reference/sed_tools/index.html" title="sed_tools"

@@ -26,9 +26,6 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="../reference/water_tools/index.html" title="water_tools"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -105,20 +102,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_logger" title="pyDeltaRCM.init_tools.init_tools.init_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_logger</span></code></a>()</p></td>
 <td><p>Initialize a logger.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_output_grids" title="pyDeltaRCM.init_tools.init_tools.init_output_grids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_output_grids</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_output_file" title="pyDeltaRCM.init_tools.init_tools.init_output_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_output_file</span></code></a>()</p></td>
 <td><p>Creates a netCDF file to store output grids.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_output_infrastructure</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_stratigraphy" title="pyDeltaRCM.init_tools.init_tools.init_stratigraphy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_stratigraphy</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_sediment_routers" title="pyDeltaRCM.init_tools.init_tools.init_sediment_routers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_sediment_routers</span></code></a>()</p></td>
+<td><p>Initialize the sediment router object here.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_stratigraphy" title="pyDeltaRCM.init_tools.init_tools.init_stratigraphy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_stratigraphy</span></code></a>()</p></td>
 <td><p>Creates sparse array to store stratigraphy data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_subsidence" title="pyDeltaRCM.init_tools.init_tools.init_subsidence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_subsidence</span></code></a>()</p></td>
-<td><p>Initializes patterns of subsidence if toggle_subsidence is True (default False)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.init_subsidence" title="pyDeltaRCM.init_tools.init_tools.init_subsidence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_subsidence</span></code></a>()</p></td>
+<td><p>Initialize subsidence pattern.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="pyDeltaRCM.init_tools.init_tools.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_checkpoint</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="pyDeltaRCM.init_tools.init_tools.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_checkpoint</span></code></a>()</p></td>
 <td><p>Load the checkpoint from the .npz file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.process_input_to_model" title="pyDeltaRCM.init_tools.init_tools.process_input_to_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_input_to_model</span></code></a>()</p></td>
+<td><p>Process input file to model variables.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_constants</span></code>()</p></td>
 <td><p></p></td>
@@ -154,21 +157,29 @@ variable is changed, including <cite>channel_flow_velocity</cite>,
 <dl class="method">
 <dt id="pyDeltaRCM.init_tools.init_tools.init_logger">
 <code class="descname">init_logger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize a logger.
-The logger is initialized regardless of the value of <code class="docutils literal notranslate"><span class="pre">self.verbose</span></code>.
+<dd><p>Initialize a logger.</p>
+<p>The logger is initialized regardless of the value of <code class="docutils literal notranslate"><span class="pre">self.verbose</span></code>.
 The level of information printed to the log depends on the verbosity
 setting.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyDeltaRCM.init_tools.init_tools.init_output_grids">
-<code class="descname">init_output_grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_grids" title="Permalink to this definition">¶</a></dt>
+<dt id="pyDeltaRCM.init_tools.init_tools.init_output_file">
+<code class="descname">init_output_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a netCDF file to store output grids.</p>
 <p>Fills with default variables.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Overwrites an existing netcdf file with the same name.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyDeltaRCM.init_tools.init_tools.init_sediment_routers">
+<code class="descname">init_sediment_routers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_sediment_routers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the sediment router object here.</p>
+<p>These are preinitialized because the “boxing” for jitted functions is
+expensive, so we avoid boxing up the constants on each iteration.</p>
 </dd></dl>
 
 <dl class="method">
@@ -180,15 +191,40 @@ setting.</p>
 <dl class="method">
 <dt id="pyDeltaRCM.init_tools.init_tools.init_subsidence">
 <code class="descname">init_subsidence</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_subsidence" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes patterns of subsidence if
+<dd><p>Initialize subsidence pattern.</p>
+<p>Initializes patterns of subsidence if
 toggle_subsidence is True (default False)</p>
-<p>Modify the equations for self.subsidence_mask and self.sigma as desired</p>
+<p>Uses theta1 and theta2 (defined in yaml) to set the angular bounds for
+the subsiding region. To create a custom subsidence region, we
+recommend subclassing the DeltaModel class and defining your own array
+for self.subsidence_mask (a binary array with 1s in the cells that
+are subsiding and 0s elswhere), and self.sigma (the subsidence mask
+multiplied with the vertical rate of subsidence and the timestep size).</p>
+<p>theta1 and theta2 are set in relation to the inlet orientation. The
+inlet channel is at an angle of 0, if theta1 is -pi/3 radians, this
+means that the angle to the left of the inlet that will be included
+in the subsiding region is 30 degrees. theta2 defines the right angular
+bounds for the subsiding region in a similar fashion.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pyDeltaRCM.init_tools.init_tools.load_checkpoint">
 <code class="descname">load_checkpoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the checkpoint from the .npz file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyDeltaRCM.init_tools.init_tools.process_input_to_model">
+<code class="descname">process_input_to_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.process_input_to_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process input file to model variables.</p>
+<p>Loop through the items specified in the model configuration and apply
+them to the model (i.e., <code class="docutils literal notranslate"><span class="pre">self</span></code>). Additionally, write the input
+values specified into the log file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">self.resume_checkpoint</span> <span class="pre">==</span> <span class="pre">True</span></code>, then the input values are
+<em>not</em> written to the log.</p>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -207,9 +243,6 @@ toggle_subsidence is True (default False)</p>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="../reference/water_tools/index.html" title="water_tools"
              >next</a> |</li>

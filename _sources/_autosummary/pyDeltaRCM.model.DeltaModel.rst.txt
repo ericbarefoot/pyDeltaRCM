@@ -18,43 +18,40 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.build_weight_array
       ~DeltaModel.check_for_boundary
       ~DeltaModel.check_size_of_indices_matrix
+      ~DeltaModel.compute_free_surface
       ~DeltaModel.create_domain
       ~DeltaModel.create_other_variables
-      ~DeltaModel.deposit
       ~DeltaModel.determine_random_seed
-      ~DeltaModel.erode
       ~DeltaModel.expand_stratigraphy
       ~DeltaModel.finalize
+      ~DeltaModel.finalize_free_surface
       ~DeltaModel.finalize_timestep
       ~DeltaModel.finalize_water_iteration
       ~DeltaModel.flooding_correction
-      ~DeltaModel.free_surf
-      ~DeltaModel.get_new_cell
       ~DeltaModel.get_water_weight_array
       ~DeltaModel.get_wet_mask_nh
       ~DeltaModel.import_files
       ~DeltaModel.init_logger
-      ~DeltaModel.init_output_grids
+      ~DeltaModel.init_output_file
       ~DeltaModel.init_output_infrastructure
+      ~DeltaModel.init_sediment_routers
       ~DeltaModel.init_stratigraphy
       ~DeltaModel.init_subsidence
       ~DeltaModel.init_water_iteration
       ~DeltaModel.load_checkpoint
       ~DeltaModel.make_figure
-      ~DeltaModel.mud_dep_ero
-      ~DeltaModel.mud_route
       ~DeltaModel.output_checkpoint
       ~DeltaModel.output_data
       ~DeltaModel.output_strata
+      ~DeltaModel.process_input_to_model
       ~DeltaModel.record_stratigraphy
+      ~DeltaModel.route_all_mud_parcels
+      ~DeltaModel.route_all_sand_parcels
       ~DeltaModel.run_one_timestep
       ~DeltaModel.run_water_iteration
-      ~DeltaModel.sand_dep_ero
-      ~DeltaModel.sand_route
       ~DeltaModel.save_figure
       ~DeltaModel.save_grids
       ~DeltaModel.save_the_checkpoint
-      ~DeltaModel.sed_parcel
       ~DeltaModel.sed_route
       ~DeltaModel.set_constants
       ~DeltaModel.show_attribute
@@ -63,9 +60,7 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.update
       ~DeltaModel.update_Q
       ~DeltaModel.update_flow_field
-      ~DeltaModel.update_u
       ~DeltaModel.update_velocity_field
-      ~DeltaModel.update_water
    
    
 

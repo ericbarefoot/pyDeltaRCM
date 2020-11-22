@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Defaul Model Variable Values &#8212; pyDeltaRCM 1.2.0 documentation</title>
+    <title>Default Model Variable Values &#8212; pyDeltaRCM 1.2.0 documentation</title>
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="deltaRCM_tools" href="../deltaRCM_tools/index.html" />
+    <link rel="next" title="Preprocessor" href="../preprocessor/index.html" />
     <link rel="prev" title="pyDeltaRCM.model.DeltaModel" href="../../_autosummary/pyDeltaRCM.model.DeltaModel.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,10 +26,7 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="../deltaRCM_tools/index.html" title="deltaRCM_tools"
+          <a href="../preprocessor/index.html" title="Preprocessor"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../../_autosummary/pyDeltaRCM.model.DeltaModel.html" title="pyDeltaRCM.model.DeltaModel"
@@ -45,8 +42,8 @@
   <p class="topless"><a href="../../_autosummary/pyDeltaRCM.model.DeltaModel.html"
                         title="previous chapter">pyDeltaRCM.model.DeltaModel</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../deltaRCM_tools/index.html"
-                        title="next chapter">deltaRCM_tools</a></p>
+  <p class="topless"><a href="../preprocessor/index.html"
+                        title="next chapter">Preprocessor</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -72,8 +69,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="defaul-model-variable-values">
-<h1>Defaul Model Variable Values<a class="headerlink" href="#defaul-model-variable-values" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="default-model-variable-values">
+<h1>Default Model Variable Values<a class="headerlink" href="#default-model-variable-values" title="Permalink to this headline">¶</a></h1>
 <p>Default model values are defined as:</p>
 <div class="highlight-yaml notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
@@ -224,7 +221,22 @@
 147
 148
 149
-150</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">out_dir</span><span class="p">:</span>
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nt">out_dir</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;str&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="s">&#39;deltaRCM_Output&#39;</span>
 <span class="nt">verbose</span><span class="p">:</span>
@@ -284,6 +296,12 @@
 <span class="nt">toggle_subsidence</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="nt">theta1</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;float&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;int&#39;</span><span class="p p-Indicator">]</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-1.0471975511965976</span>
+<span class="nt">theta2</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;float&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;int&#39;</span><span class="p p-Indicator">]</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1.0471975511965976</span>
 <span class="nt">sigma_max</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;float&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;int&#39;</span><span class="p p-Indicator">]</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2e-9</span>
@@ -305,9 +323,15 @@
 <span class="nt">save_velocity_figs</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="nt">save_sedflux_figs</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">save_figs_sequential</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="nt">save_metadata</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">save_eta_grids</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -321,6 +345,9 @@
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">save_velocity_grids</span><span class="p">:</span>
+  <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
+  <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="nt">save_sedflux_grids</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="s">&#39;bool&#39;</span>
   <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">save_dt</span><span class="p">:</span>
@@ -391,10 +418,7 @@
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="../deltaRCM_tools/index.html" title="deltaRCM_tools"
+          <a href="../preprocessor/index.html" title="Preprocessor"
              >next</a> |</li>
         <li class="right" >
           <a href="../../_autosummary/pyDeltaRCM.model.DeltaModel.html" title="pyDeltaRCM.model.DeltaModel"
