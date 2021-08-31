@@ -1,4 +1,4 @@
-pyDeltaRCM.preprocessor.BasePreprocessor
+﻿pyDeltaRCM.preprocessor.BasePreprocessor
 ========================================
 
 .. currentmodule:: pyDeltaRCM.preprocessor
@@ -13,15 +13,21 @@ pyDeltaRCM.preprocessor.BasePreprocessor
 
    .. autosummary::
    
-      ~BasePreprocessor.construct_job_list
-      ~BasePreprocessor.expand_yaml_ensemble
-      ~BasePreprocessor.expand_yaml_matrix
-      ~BasePreprocessor.preliminary_yaml_parsing
+      ~BasePreprocessor.__init__
+      ~BasePreprocessor.construct_file_list
+      ~BasePreprocessor.open_input_file_to_dict
       ~BasePreprocessor.run_jobs
-      ~BasePreprocessor.write_yaml_config
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~BasePreprocessor.config_list
+      ~BasePreprocessor.file_list
+      ~BasePreprocessor.job_list
    
    

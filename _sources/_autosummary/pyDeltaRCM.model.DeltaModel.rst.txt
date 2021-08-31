@@ -1,4 +1,4 @@
-pyDeltaRCM.model.DeltaModel
+﻿pyDeltaRCM.model.DeltaModel
 ===========================
 
 .. currentmodule:: pyDeltaRCM.model
@@ -19,10 +19,11 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.check_for_boundary
       ~DeltaModel.check_size_of_indices_matrix
       ~DeltaModel.compute_free_surface
+      ~DeltaModel.compute_sand_frac
+      ~DeltaModel.create_boundary_conditions
       ~DeltaModel.create_domain
       ~DeltaModel.create_other_variables
       ~DeltaModel.determine_random_seed
-      ~DeltaModel.expand_stratigraphy
       ~DeltaModel.finalize
       ~DeltaModel.finalize_free_surface
       ~DeltaModel.finalize_timestep
@@ -30,32 +31,60 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.flooding_correction
       ~DeltaModel.get_water_weight_array
       ~DeltaModel.get_wet_mask_nh
+      ~DeltaModel.hook_apply_subsidence
+      ~DeltaModel.hook_compute_free_surface
+      ~DeltaModel.hook_compute_sand_frac
+      ~DeltaModel.hook_create_domain
+      ~DeltaModel.hook_create_other_variables
+      ~DeltaModel.hook_finalize_timestep
+      ~DeltaModel.hook_finalize_water_iteration
+      ~DeltaModel.hook_import_files
+      ~DeltaModel.hook_init_output_file
+      ~DeltaModel.hook_init_sediment_iteration
+      ~DeltaModel.hook_init_water_iteration
+      ~DeltaModel.hook_load_checkpoint
+      ~DeltaModel.hook_output_checkpoint
+      ~DeltaModel.hook_output_data
+      ~DeltaModel.hook_process_input_to_model
+      ~DeltaModel.hook_route_all_mud_parcels
+      ~DeltaModel.hook_route_all_sand_parcels
+      ~DeltaModel.hook_route_sediment
+      ~DeltaModel.hook_route_water
+      ~DeltaModel.hook_run_water_iteration
+      ~DeltaModel.hook_solve_water_and_sediment_timestep
+      ~DeltaModel.hook_topo_diffusion
       ~DeltaModel.import_files
       ~DeltaModel.init_logger
+      ~DeltaModel.init_metadata_list
       ~DeltaModel.init_output_file
       ~DeltaModel.init_output_infrastructure
+      ~DeltaModel.init_sediment_iteration
       ~DeltaModel.init_sediment_routers
-      ~DeltaModel.init_stratigraphy
       ~DeltaModel.init_subsidence
       ~DeltaModel.init_water_iteration
       ~DeltaModel.load_checkpoint
+      ~DeltaModel.log_info
+      ~DeltaModel.log_model_time
       ~DeltaModel.make_figure
       ~DeltaModel.output_checkpoint
       ~DeltaModel.output_data
-      ~DeltaModel.output_strata
       ~DeltaModel.process_input_to_model
-      ~DeltaModel.record_stratigraphy
       ~DeltaModel.route_all_mud_parcels
       ~DeltaModel.route_all_sand_parcels
+      ~DeltaModel.route_sediment
+      ~DeltaModel.route_water
       ~DeltaModel.run_one_timestep
       ~DeltaModel.run_water_iteration
       ~DeltaModel.save_figure
       ~DeltaModel.save_grids
+      ~DeltaModel.save_grids_and_figs
       ~DeltaModel.save_the_checkpoint
       ~DeltaModel.sed_route
       ~DeltaModel.set_constants
       ~DeltaModel.show_attribute
       ~DeltaModel.show_ind
+      ~DeltaModel.show_line
+      ~DeltaModel.solve_water_and_sediment_timestep
       ~DeltaModel.topo_diffusion
       ~DeltaModel.update
       ~DeltaModel.update_Q
@@ -83,6 +112,7 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.S0
       ~DeltaModel.SLR
       ~DeltaModel.Width
+      ~DeltaModel.active_layer_thickness
       ~DeltaModel.alpha
       ~DeltaModel.bed_elevation
       ~DeltaModel.bedload_fraction
@@ -91,6 +121,7 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.channel_flow_velocity
       ~DeltaModel.channel_width
       ~DeltaModel.checkpoint_dt
+      ~DeltaModel.clobber_netcdf
       ~DeltaModel.coeff_U_dep_mud
       ~DeltaModel.coeff_U_ero_mud
       ~DeltaModel.coeff_U_ero_sand
@@ -100,12 +131,14 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.dx
       ~DeltaModel.f_bedload
       ~DeltaModel.h0
+      ~DeltaModel.hb
       ~DeltaModel.influx_sediment_concentration
       ~DeltaModel.itermax
       ~DeltaModel.omega_flow
       ~DeltaModel.omega_sfc
       ~DeltaModel.out_dir
       ~DeltaModel.resume_checkpoint
+      ~DeltaModel.sand_frac_bc
       ~DeltaModel.save_checkpoint
       ~DeltaModel.save_depth_figs
       ~DeltaModel.save_depth_grids
@@ -118,13 +151,14 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.save_figs_sequential
       ~DeltaModel.save_iter
       ~DeltaModel.save_metadata
+      ~DeltaModel.save_sandfrac_figs
+      ~DeltaModel.save_sandfrac_grids
       ~DeltaModel.save_sedflux_figs
       ~DeltaModel.save_sedflux_grids
       ~DeltaModel.save_stage_figs
       ~DeltaModel.save_stage_grids
-      ~DeltaModel.save_strata
       ~DeltaModel.save_time_since_checkpoint
-      ~DeltaModel.save_time_since_last
+      ~DeltaModel.save_time_since_data
       ~DeltaModel.save_velocity_components
       ~DeltaModel.save_velocity_figs
       ~DeltaModel.save_velocity_grids
@@ -133,11 +167,9 @@ pyDeltaRCM.model.DeltaModel
       ~DeltaModel.sea_surface_mean_elevation
       ~DeltaModel.sed_lag
       ~DeltaModel.seed
-      ~DeltaModel.sigma_max
       ~DeltaModel.start_subsidence
       ~DeltaModel.stepmax
-      ~DeltaModel.theta1
-      ~DeltaModel.theta2
+      ~DeltaModel.subsidence_rate
       ~DeltaModel.theta_water
       ~DeltaModel.time
       ~DeltaModel.time_iter

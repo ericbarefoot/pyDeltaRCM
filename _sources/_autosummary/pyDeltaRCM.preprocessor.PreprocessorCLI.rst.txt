@@ -1,4 +1,4 @@
-pyDeltaRCM.preprocessor.PreprocessorCLI
+﻿pyDeltaRCM.preprocessor.PreprocessorCLI
 =======================================
 
 .. currentmodule:: pyDeltaRCM.preprocessor
@@ -14,16 +14,21 @@ pyDeltaRCM.preprocessor.PreprocessorCLI
    .. autosummary::
    
       ~PreprocessorCLI.__init__
-      ~PreprocessorCLI.construct_job_list
-      ~PreprocessorCLI.expand_yaml_ensemble
-      ~PreprocessorCLI.expand_yaml_matrix
-      ~PreprocessorCLI.preliminary_yaml_parsing
+      ~PreprocessorCLI.construct_file_list
+      ~PreprocessorCLI.open_input_file_to_dict
       ~PreprocessorCLI.process_arguments
       ~PreprocessorCLI.run_jobs
-      ~PreprocessorCLI.write_yaml_config
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PreprocessorCLI.config_list
+      ~PreprocessorCLI.file_list
+      ~PreprocessorCLI.job_list
    
    
