@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>init_tools &#8212; pyDeltaRCM 2.0.3 documentation</title>
+    <title>init_tools &#8212; pyDeltaRCM 2.1.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
@@ -15,6 +15,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -33,7 +34,7 @@
         <li class="right" >
           <a href="../iteration_tools/index.html" title="iteration_tools"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">init_tools</a></li> 
       </ul>
@@ -45,14 +46,10 @@
           <div class="body" role="main">
             
   <section id="init-tools">
-<h1>init_tools<a class="headerlink" href="#init-tools" title="Permalink to this headline">¶</a></h1>
+<h1>init_tools<a class="headerlink" href="#init-tools" title="Permalink to this heading">¶</a></h1>
 <p>The model initialization is managed by <a class="reference internal" href="../../_autosummary/pyDeltaRCM.model.DeltaModel.html#pyDeltaRCM.model.DeltaModel.__init__" title="pyDeltaRCM.model.DeltaModel.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>, but the actual initialization is mostly handled by routines in <cite>init_tools</cite>.
 The major steps of initialization are:</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.import_files" title="pyDeltaRCM.init_tools.init_tools.import_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_tools.import_files</span></code></a>([kwargs_dict])</p></td>
 <td><p>Import the input files.</p></td>
@@ -81,11 +78,7 @@ The major steps of initialization are:</p>
 </tbody>
 </table>
 <p>and then depending on the checkpointing configuration, the following methods may be called:</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="pyDeltaRCM.init_tools.init_tools.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_tools.load_checkpoint</span></code></a>([defer_output])</p></td>
 <td><p>Load the checkpoint from the .npz file.</p></td>
@@ -105,13 +98,9 @@ The major steps of initialization are:</p>
 </tbody>
 </table>
 <section id="public-api-methods-attached-to-model">
-<h2>Public API methods attached to model<a class="headerlink" href="#public-api-methods-attached-to-model" title="Permalink to this headline">¶</a></h2>
+<h2>Public API methods attached to model<a class="headerlink" href="#public-api-methods-attached-to-model" title="Permalink to this heading">¶</a></h2>
 <p>The following methods are defined in the <code class="docutils literal notranslate"><span class="pre">init_tools</span></code> class, of the <code class="docutils literal notranslate"><span class="pre">pyDeltaRCM.init_tools</span></code> module.</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools" title="pyDeltaRCM.init_tools.init_tools"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_tools</span></code></a>()</p></td>
 <td><p></p></td>
@@ -120,10 +109,10 @@ The major steps of initialization are:</p>
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyDeltaRCM.init_tools.</span></span><span class="sig-name descname"><span class="pre">init_tools</span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyDeltaRCM.init_tools.</span></span><span class="sig-name descname"><span class="pre">init_tools</span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.create_boundary_conditions">
-<span class="sig-name descname"><span class="pre">create_boundary_conditions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_boundary_conditions" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_boundary_conditions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_boundary_conditions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create model boundary conditions</p>
 <p>This method is run during model initialization to determine the
 boundary conditions based on the initial conditions specified as model
@@ -149,7 +138,7 @@ again if you modify the model boundary conditions that way.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.create_domain">
-<span class="sig-name descname"><span class="pre">create_domain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_domain" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_domain</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the model domain.</p>
 <p>This method initializes the model domain, including coordinate arrays,
 gridded fields (eta, qw, etc.) and cell type information. The method
@@ -159,17 +148,17 @@ not need to be called again.</p>
 <p class="admonition-title">Hint</p>
 <p>If you need to modify the model domain after it has been created,
 it is probably safe to modify attributes directly, but take care
-to ensure any dependent fields are also approrpriately changed.</p>
+to ensure any dependent fields are also appropriately changed.</p>
 </div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.create_other_variables">
-<span class="sig-name descname"><span class="pre">create_other_variables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_other_variables" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_other_variables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.create_other_variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Model implementation variables.</p>
 <p>Creates variables for model implementation, from specified boundary
 condition variables. This method is run during initial model
-instantition. Internally, this method calls <a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.set_constants" title="pyDeltaRCM.init_tools.init_tools.set_constants"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_constants</span></code></a> and
+instantiation. Internally, this method calls <a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.set_constants" title="pyDeltaRCM.init_tools.init_tools.set_constants"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_constants</span></code></a> and
 <a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.create_boundary_conditions" title="pyDeltaRCM.init_tools.init_tools.create_boundary_conditions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_boundary_conditions</span></code></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -181,7 +170,7 @@ boundary condition variables, and instead only re-run
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.determine_random_seed">
-<span class="sig-name descname"><span class="pre">determine_random_seed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.determine_random_seed" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">determine_random_seed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.determine_random_seed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the random seed if given.</p>
 <p>If a random seed is specified, set the seed to this value.</p>
 <p>Writes the seed to the log for record.</p>
@@ -189,12 +178,12 @@ boundary condition variables, and instead only re-run
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.import_files">
-<span class="sig-name descname"><span class="pre">import_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kwargs_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.import_files" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">import_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kwargs_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.import_files" title="Permalink to this definition">¶</a></dt>
 <dd><p>Import the input files.</p>
 <p>This method handles the parsing and validation of any options supplied
 via the configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>kwargs_dict</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code>, optional) – A dictionary with keys matching valid model parameter names that
 can be specified in a configuration YAML file. Keys given in this
 dictionary will supercede values specified in the YAML
@@ -205,7 +194,7 @@ configuration.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_logger">
-<span class="sig-name descname"><span class="pre">init_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_logger" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize a logger.</p>
 <p>The logger is initialized regardless of the value of <code class="docutils literal notranslate"><span class="pre">self.verbose</span></code>.
 The level of information printed to the log depends on the verbosity
@@ -214,14 +203,14 @@ setting.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_metadata_list">
-<span class="sig-name descname"><span class="pre">init_metadata_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_metadata_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_metadata_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_metadata_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Populate the list of metadata information.</p>
 <p>Sets up the dictionary object for the standard metadata.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_output_file">
-<span class="sig-name descname"><span class="pre">init_output_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_file" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_output_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a netCDF file to store output grids.</p>
 <p>Fills with default variables.</p>
 <div class="admonition warning">
@@ -233,7 +222,7 @@ setting.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_output_infrastructure">
-<span class="sig-name descname"><span class="pre">init_output_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_infrastructure" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_output_infrastructure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_output_infrastructure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize the output infrastructure (folder and save lists).</p>
 <p>This method is the first called in the initialization of the
 <cite>DeltaModel</cite>, after the configuration variables have been imported.</p>
@@ -241,7 +230,7 @@ setting.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_sediment_routers">
-<span class="sig-name descname"><span class="pre">init_sediment_routers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_sediment_routers" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_sediment_routers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_sediment_routers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize the sediment router object here.</p>
 <p>These are preinitialized because the “boxing” for jitted functions is
 expensive, so we avoid boxing up the constants on each iteration.</p>
@@ -254,7 +243,7 @@ reinitialize the sediment routers (i.e., rerun this method)</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.init_subsidence">
-<span class="sig-name descname"><span class="pre">init_subsidence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_subsidence" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">init_subsidence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.init_subsidence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize subsidence pattern.</p>
 <p>Initializes patterns of subsidence if toggle_subsidence is True
 (default False). Default behavior is for the entire basin to subside
@@ -267,7 +256,7 @@ DeltaModel class.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.load_checkpoint">
-<span class="sig-name descname"><span class="pre">load_checkpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defer_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">load_checkpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defer_output</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the checkpoint from the .npz file.</p>
 <p>Uses the file at the path determined by <cite>self.prefix</cite> and a file named
 <cite>checkpoint.npz</cite>. There are a few pathways for loading, which depend
@@ -277,7 +266,7 @@ of the <code class="xref py py-obj docutils literal notranslate"><span class="pr
 optional argument.</p>
 <p>As a standard user, you should not need to worry about any of these
 pathways or options. However, if you are developing pyDeltaRCM or
-customizing the model in any way that involves loadind from
+customizing the model in any way that involves loading from
 checkpoints, you should be aware of these pathways.</p>
 <p>For example, loading from checkpoint will succeed if no netCDF4 file
 is found, where one is expected (e.g., because <code class="xref py py-obj docutils literal notranslate"><span class="pre">_save_any_grids</span></code>
@@ -285,7 +274,7 @@ is <cite>True</cite>). In this case, a new output netcdf file will be created,
 after a <cite>UserWarning</cite> is issued.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>If you are customing the model and intend to use checkpointing and
+<p>If you are customizing the model and intend to use checkpointing and
 the <code class="xref py py-obj docutils literal notranslate"><span class="pre">Preprocessor</span></code> parallel infrastructure, be sure that
 parameter <code class="xref py py-obj docutils literal notranslate"><span class="pre">defer_output</span></code> is <cite>True</cite> until the
 <a class="reference internal" href="#pyDeltaRCM.init_tools.init_tools.load_checkpoint" title="pyDeltaRCM.init_tools.init_tools.load_checkpoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_checkpoint</span></code></a> method can be called from the thread the
@@ -293,7 +282,7 @@ model will execute on. Failure to do so may result in unexpected
 behavior with indexing in the output netCDF4 file.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>defer_output</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>, optional) – Whether to defer any netCDF activities at present. Manipulating
 this variable is critical for parallel operations. See note above.
 Default is <cite>False</cite>.</p>
@@ -303,7 +292,7 @@ Default is <cite>False</cite>.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.process_input_to_model">
-<span class="sig-name descname"><span class="pre">process_input_to_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.process_input_to_model" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">process_input_to_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.process_input_to_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Process input file to model variables.</p>
 <p>Loop through the items specified in the model configuration and apply
 them to the model (i.e., <code class="docutils literal notranslate"><span class="pre">self</span></code>). Additionally, write the input
@@ -317,7 +306,7 @@ values specified into the log file.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyDeltaRCM.init_tools.init_tools.set_constants">
-<span class="sig-name descname"><span class="pre">set_constants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.set_constants" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_constants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyDeltaRCM.init_tools.init_tools.set_constants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the model constants.</p>
 <p>Configure constants, including coordinates and distances, as well as
 environmental constants (gravity), and kernels for smoothing
@@ -348,20 +337,26 @@ attribute, which is simply the flattened version of that attribute.</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">init_tools</a><ul>
 <li><a class="reference internal" href="#public-api-methods-attached-to-model">Public API methods attached to model</a></li>
 </ul>
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../iteration_tools/index.html"
-                        title="previous chapter">iteration_tools</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../water_tools/index.html"
-                        title="next chapter">water_tools</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../iteration_tools/index.html"
+                          title="previous chapter">iteration_tools</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../water_tools/index.html"
+                          title="next chapter">water_tools</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -378,7 +373,7 @@ attribute, which is simply the flattened version of that attribute.</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -395,14 +390,14 @@ attribute, which is simply the flattened version of that attribute.</p>
         <li class="right" >
           <a href="../iteration_tools/index.html" title="iteration_tools"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >API reference</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">init_tools</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

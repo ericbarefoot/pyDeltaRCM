@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Saving custom fields to the output file &#8212; pyDeltaRCM 2.0.3 documentation</title>
+    <title>Saving custom fields to the output file &#8212; pyDeltaRCM 2.1.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,10 +15,11 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Developer Guide" href="../guides/developer_guide.html" />
+    <link rel="next" title="Using custom classes with the Preprocessor" href="custom_class_preprocessor.html" />
     <link rel="prev" title="Defining custom YAML parameters" href="custom_yaml.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -28,12 +29,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../guides/developer_guide.html" title="Developer Guide"
+          <a href="custom_class_preprocessor.html" title="Using custom classes with the Preprocessor"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="custom_yaml.html" title="Defining custom YAML parameters"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Examples of using and working with pyDeltaRCM</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Saving custom fields to the output file</a></li> 
       </ul>
@@ -45,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="saving-custom-fields-to-the-output-file">
-<h1>Saving custom fields to the output file<a class="headerlink" href="#saving-custom-fields-to-the-output-file" title="Permalink to this headline">¶</a></h1>
+<h1>Saving custom fields to the output file<a class="headerlink" href="#saving-custom-fields-to-the-output-file" title="Permalink to this heading">¶</a></h1>
 <p>Given the flexibility of the pyDeltaRCM model to modifications via hooks and subclassing, it is necessary that the variables saved to the output netCDF file are similarly customizable.
 Fortunately, the use of subclasses and hooks itself enables flexible setting of gridded variables to be saved as figures, as well as customization of the fields saved to the netCDF file as both variables, and as metadata.</p>
 <p>To customize the figures and variables that are saved, the hook <code class="docutils literal notranslate"><span class="pre">hook_init_output_file</span></code> should be used to subclass the pyDeltaRCM model.</p>
@@ -59,10 +60,10 @@ Trying to set up figures to save that are not variables of that shape will resul
 <p>When adding variables or metadata to be initialized and subsequently saved in the output netCDF, the key-value pair relationship is as follows.
 The key added to <code class="docutils literal notranslate"><span class="pre">self._save_var_list</span></code> is the name of the variable as it will be recorded in the netCDF file, this <em>does not</em> have to correspond to the name of an attribute in the model.
 To add a variable to the metadata, a key must be added to <code class="docutils literal notranslate"><span class="pre">self._save_var_list['meta']</span></code>.
-The expected value for a given key is a list containing strings indicating the model attribute to be saved, its units, the variable type, and lastly the variable dimensions (e.g., <code class="docutils literal notranslate"><span class="pre">['active_layer',</span> <span class="pre">'fraction',</span> <span class="pre">'f4',</span> <span class="pre">('total_time',</span> <span class="pre">'length',</span> <span class="pre">'width')]</span></code> for the active layer).</p>
+The expected value for a given key is a list containing strings indicating the model attribute to be saved, its units, the variable type, and lastly the variable dimensions (e.g., <code class="docutils literal notranslate"><span class="pre">['active_layer',</span> <span class="pre">'fraction',</span> <span class="pre">'f4',</span> <span class="pre">('time',</span> <span class="pre">'x',</span> <span class="pre">'y')]</span></code> for the active layer).</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The dimensions of the custom variable being specified must match <em>exactly</em> with one of the three standard dimensions: length, width, total_time.
+<p>The dimensions of the custom variable being specified must match <em>exactly</em> with one of the three standard dimensions: <cite>x</cite>, <cite>y</cite>, <cite>time</cite>.
 Use of an invalid dimension will result in an error.</p>
 </div>
 <p>An example of using the hook and creating a model subclass to customize the figures, gridded variables, and metadata being saved is provided below.</p>
@@ -87,8 +88,8 @@ Use of an invalid dimension will result in an error.</p>
 <span class="gp">...</span>
 <span class="gp">... </span>        <span class="c1"># save the active layer grid each save_dt w/ a short name</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_save_var_list</span><span class="p">[</span><span class="s1">&#39;actlay&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;active_layer&#39;</span><span class="p">,</span> <span class="s1">&#39;fraction&#39;</span><span class="p">,</span>
-<span class="gp">... </span>                                         <span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;total_time&#39;</span><span class="p">,</span>
-<span class="gp">... </span>                                                <span class="s1">&#39;length&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">)]</span>
+<span class="gp">... </span>                                         <span class="s1">&#39;f4&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                                                <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)]</span>
 <span class="gp">...</span>
 <span class="gp">... </span>        <span class="c1"># save number of water parcels w/ a long name</span>
 <span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">_save_var_list</span><span class="p">[</span><span class="s1">&#39;meta&#39;</span><span class="p">][</span><span class="s1">&#39;water_parcels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Np_water&#39;</span><span class="p">,</span>
@@ -109,7 +110,7 @@ For simplicity we will just check that the appropriate parameters were added to 
 <span class="go">{&#39;active_layer&#39;: [&#39;active_layer&#39;]}</span>
 
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mdl</span><span class="o">.</span><span class="n">_save_var_list</span><span class="p">)</span>
-<span class="go">{&#39;meta&#39;: {&#39;water_parcels&#39;: [&#39;Np_water&#39;, &#39;parcels&#39;, &#39;i8&#39;, ()]}, &#39;actlay&#39;: [&#39;active_layer&#39;, &#39;fraction&#39;, &#39;f4&#39;, (&#39;total_time&#39;, &#39;length&#39;, &#39;width&#39;)]}</span>
+<span class="go">{&#39;meta&#39;: {&#39;water_parcels&#39;: [&#39;Np_water&#39;, &#39;parcels&#39;, &#39;i8&#39;, ()]}, &#39;actlay&#39;: [&#39;active_layer&#39;, &#39;fraction&#39;, &#39;f4&#39;, (&#39;time&#39;, &#39;x&#39;, &#39;y&#39;)]}</span>
 </pre></div>
 </div>
 </section>
@@ -121,12 +122,16 @@ For simplicity we will just check that the appropriate parameters were added to 
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="custom_yaml.html"
-                        title="previous chapter">Defining custom YAML parameters</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../guides/developer_guide.html"
-                        title="next chapter">Developer Guide</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="custom_yaml.html"
+                          title="previous chapter">Defining custom YAML parameters</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="custom_class_preprocessor.html"
+                          title="next chapter">Using custom classes with the Preprocessor</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -143,7 +148,7 @@ For simplicity we will just check that the appropriate parameters were added to 
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -155,19 +160,19 @@ For simplicity we will just check that the appropriate parameters were added to 
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../guides/developer_guide.html" title="Developer Guide"
+          <a href="custom_class_preprocessor.html" title="Using custom classes with the Preprocessor"
              >next</a> |</li>
         <li class="right" >
           <a href="custom_yaml.html" title="Defining custom YAML parameters"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Examples of using and working with pyDeltaRCM</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Saving custom fields to the output file</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

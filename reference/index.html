@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>API reference &#8212; pyDeltaRCM 2.0.3 documentation</title>
+    <title>API reference &#8212; pyDeltaRCM 2.1.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,6 +15,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,7 @@
         <li class="right" >
           <a href="../guides/developer_guide.html" title="Developer Guide"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API reference</a></li> 
       </ul>
     </div>  
@@ -44,7 +45,7 @@
           <div class="body" role="main">
             
   <section id="api-reference">
-<h1>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<h1>API reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">¶</a></h1>
 <p>The <code class="xref py py-obj docutils literal notranslate"><span class="pre">DeltaModel</span></code> class, defined in <cite>pyDeltaRCM.model</cite>, is the main class of pyDeltaRCM, which provides the object that is manipulated to evolve the numerical delta model.
 This class uses “mix-in” classes, which are defined in separate files (Python <cite>modules</cite>), that break out logically based on the various stages of model use, and components of the model iteration sequence.
 Most model functionality is organized into the various mix-in classes, that are then inherited by the <cite>DeltaModel</cite>.
@@ -100,13 +101,13 @@ The index includes model classes, methods, and attributes, as well as additional
 </ul>
 </div>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="../py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="../search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 <section id="search-the-index">
-<h3>Search the Index<a class="headerlink" href="#search-the-index" title="Permalink to this headline">¶</a></h3>
+<h3>Search the Index<a class="headerlink" href="#search-the-index" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../genindex.html"><span class="std std-ref">Index</span></a></p></li>
 </ul>
@@ -121,8 +122,9 @@ The index includes model classes, methods, and attributes, as well as additional
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">API reference</a><ul>
 <li><a class="reference internal" href="#references">References</a><ul>
 <li><a class="reference internal" href="#search-the-index">Search the Index</a></li>
@@ -132,12 +134,17 @@ The index includes model classes, methods, and attributes, as well as additional
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../guides/developer_guide.html"
-                        title="previous chapter">Developer Guide</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="model/index.html"
-                        title="next chapter">model</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../guides/developer_guide.html"
+                          title="previous chapter">Developer Guide</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="model/index.html"
+                          title="next chapter">model</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -154,7 +161,7 @@ The index includes model classes, methods, and attributes, as well as additional
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -171,13 +178,13 @@ The index includes model classes, methods, and attributes, as well as additional
         <li class="right" >
           <a href="../guides/developer_guide.html" title="Developer Guide"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">API reference</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Welcome to the PyDeltaRCM documentation &#8212; pyDeltaRCM 2.0.3 documentation</title>
+    <title>Welcome to the PyDeltaRCM documentation &#8212; pyDeltaRCM 2.1.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
@@ -15,6 +15,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,7 +30,7 @@
         <li class="right" >
           <a href="meta/installing.html" title="Installing"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Welcome to the PyDeltaRCM documentation</a></li> 
       </ul>
     </div>  
@@ -40,7 +41,7 @@
           <div class="body" role="main">
             
   <section id="welcome-to-the-pydeltarcm-documentation">
-<h1>Welcome to the PyDeltaRCM documentation<a class="headerlink" href="#welcome-to-the-pydeltarcm-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Welcome to the PyDeltaRCM documentation<a class="headerlink" href="#welcome-to-the-pydeltarcm-documentation" title="Permalink to this heading">¶</a></h1>
 <p><em>pyDeltaRCM</em> is a computationally efficient, free and open source, and easy-to-customize numerical delta model based on the original DeltaRCM model design (<a class="reference external" href="https://csdms.colorado.edu/wiki/Model:DeltaRCM">Matlab DeltaRCM</a> model by Man Liang).
 <em>pyDeltaRCM</em> delivers improved model stability and capabilities, infrastructure to support exploration with minimal boilerplate code, and establishes an approach to extending model capabilities that ensures reproducible and comparable studies.</p>
 <p>(<a class="reference external" href="./pyplots/guides/cover.png">png</a>, <a class="reference external" href="./pyplots/guides/cover.hires.png">hires.png</a>)</p>
@@ -52,7 +53,11 @@
 </figure>
 </section>
 <section id="project-information">
-<h1>Project information<a class="headerlink" href="#project-information" title="Permalink to this headline">¶</a></h1>
+<h1>Project information<a class="headerlink" href="#project-information" title="Permalink to this heading">¶</a></h1>
+<a class="reference external image-reference" href="https://github.com/DeltaRCM/pyDeltaRCM/releases"><img alt="https://badge.fury.io/gh/DeltaRCM%2FpyDeltaRCM.svg" src="https://badge.fury.io/gh/DeltaRCM%2FpyDeltaRCM.svg" /></a>
+<a class="reference external image-reference" href="https://badge.fury.io/py/pyDeltaRCM"><img alt="https://badge.fury.io/py/pyDeltaRCM.svg" src="https://badge.fury.io/py/pyDeltaRCM.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/DeltaRCM/pyDeltaRCM"><img alt="https://img.shields.io/static/v1?label=GitHub&amp;logo=github&amp;message=source&amp;color=brightgreen" src="https://img.shields.io/static/v1?label=GitHub&amp;logo=github&amp;message=source&amp;color=brightgreen" /></a>
+<a class="reference external image-reference" href="https://doi.org/10.21105/joss.03398"><img alt="https://joss.theoj.org/papers/10.21105/joss.03398/status.svg" src="https://joss.theoj.org/papers/10.21105/joss.03398/status.svg" /></a>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="meta/installing.html">Installing</a></li>
@@ -63,7 +68,7 @@
 </div>
 </section>
 <section id="user-documentation">
-<span id="id1"></span><h1>User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guides/getting_started.html">Getting Started</a><ul>
@@ -85,21 +90,27 @@
 <li class="toctree-l2"><a class="reference internal" href="info/hydrodynamics.html">Hydrodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="info/morphodynamics.html">Morphodynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="info/outputfile.html">Model Output File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/model/model_hooks.html">Available Model Hooks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples of using and working with pyDeltaRCM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#running-the-model">Running the model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html#modifying-initial-conditions">Modifying initial conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html#modifying-boundary-conditions">Modifying boundary conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html#modifying-internal-computations">Modifying internal computations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/index.html#modifying-behavior-of-the-preprocessor">Modifying behavior of the Preprocessor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html#modifying-model-input-output">Modifying Model Input/Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/index.html#working-with-the-preprocessor">Working with the Preprocessor</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
 <section id="developer-documentation">
-<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this headline">¶</a></h1>
+<h1>Developer documentation<a class="headerlink" href="#developer-documentation" title="Permalink to this heading">¶</a></h1>
+<a class="reference external image-reference" href="https://badge.fury.io/py/pyDeltaRCM"><img alt="https://badge.fury.io/py/pyDeltaRCM.svg" src="https://badge.fury.io/py/pyDeltaRCM.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/DeltaRCM/pyDeltaRCM/actions"><img alt="https://github.com/DeltaRCM/pyDeltaRCM/actions/workflows/build.yml/badge.svg" src="https://github.com/DeltaRCM/pyDeltaRCM/actions/workflows/build.yml/badge.svg" /></a>
+<a class="reference external image-reference" href="https://codecov.io/gh/DeltaRCM/pyDeltaRCM"><img alt="https://codecov.io/gh/DeltaRCM/pyDeltaRCM/branch/develop/graph/badge.svg" src="https://codecov.io/gh/DeltaRCM/pyDeltaRCM/branch/develop/graph/badge.svg" /></a>
+<a class="reference external image-reference" href="https://www.codacy.com/gh/DeltaRCM/pyDeltaRCM?utm_source=github.com&amp;amp;utm_medium=referral&amp;amp;utm_content=DeltaRCM/pyDeltaRCM&amp;amp;utm_campaign=Badge_Grade"><img alt="https://app.codacy.com/project/badge/Grade/1c137d0227914741a9ba09f0b00a49a7" src="https://app.codacy.com/project/badge/Grade/1c137d0227914741a9ba09f0b00a49a7" /></a>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guides/developer_guide.html">Developer Guide</a><ul>
@@ -172,17 +183,21 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Welcome to the PyDeltaRCM documentation</a></li>
 <li><a class="reference internal" href="#project-information">Project information</a></li>
 <li><a class="reference internal" href="#user-documentation">User documentation</a></li>
 <li><a class="reference internal" href="#developer-documentation">Developer documentation</a></li>
 </ul>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="meta/installing.html"
-                        title="next chapter">Installing</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="meta/installing.html"
+                          title="next chapter">Installing</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -199,7 +214,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -213,13 +228,13 @@
         <li class="right" >
           <a href="meta/installing.html" title="Installing"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Welcome to the PyDeltaRCM documentation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>

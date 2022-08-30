@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>10-minute tutorial &#8212; pyDeltaRCM 2.0.3 documentation</title>
+    <title>10-minute tutorial &#8212; pyDeltaRCM 2.1.4 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,6 +15,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -33,7 +34,7 @@
         <li class="right" >
           <a href="getting_started.html" title="Getting Started"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="getting_started.html" accesskey="U">Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">10-minute tutorial</a></li> 
       </ul>
@@ -45,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="minute-tutorial">
-<h1>10-minute tutorial<a class="headerlink" href="#minute-tutorial" title="Permalink to this headline">¶</a></h1>
+<h1>10-minute tutorial<a class="headerlink" href="#minute-tutorial" title="Permalink to this heading">¶</a></h1>
 <p>Use pyDeltaRCM in ten minutes!
 This simple guide will show you the absolute basics of getting a <cite>pyDeltaRCM</cite> model running, and give you some direction on where to go from there.</p>
 <div class="admonition important">
@@ -53,7 +54,7 @@ This simple guide will show you the absolute basics of getting a <cite>pyDeltaRC
 <p>If you haven’t already, be sure to follow the <a class="reference internal" href="../meta/installing.html"><span class="doc">installation guide</span></a> to get <em>pyDeltaRCM</em> set up properly on your computer.</p>
 </div>
 <section id="a-default-model">
-<h2>A default model<a class="headerlink" href="#a-default-model" title="Permalink to this headline">¶</a></h2>
+<h2>A default model<a class="headerlink" href="#a-default-model" title="Permalink to this heading">¶</a></h2>
 <p>You can get a model running with five simple lines of Python code. Note that you can run <em>pyDeltaRCM</em> in either a standalone script or part of an interactive session.
 First, we instantiate the main <code class="xref py py-obj docutils literal notranslate"><span class="pre">DeltaModel</span></code> model object.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pyDeltaRCM</span>
@@ -90,7 +91,7 @@ So, we simply create a <cite>for</cite> loop, and call the <cite>update</cite> f
 </figure>
 </section>
 <section id="the-model-with-set-parameters">
-<h2>The model with set parameters<a class="headerlink" href="#the-model-with-set-parameters" title="Permalink to this headline">¶</a></h2>
+<h2>The model with set parameters<a class="headerlink" href="#the-model-with-set-parameters" title="Permalink to this heading">¶</a></h2>
 <p>To run a simulation with a non-default set of parameters, we use a configuration file written in the YAML markup language named <cite>10min_tutorial.yaml</cite>.
 The markup file allows us to specify model boundary conditions and input and output settings, where anything set in the file will override the <a class="reference internal" href="../reference/model/yaml_defaults.html"><span class="doc">default parameters</span></a> for the model, and anything <em>not</em> specified will take the default value.</p>
 <div class="admonition important">
@@ -102,9 +103,9 @@ To create the YAML file, open up your favorite plain-text editing application (e
 YAML syntax is pretty simple for basic configurations, essentially amounting to each line representing a parameter-value pair, separated by a colon.
 For this example, let’s specify three simulation controls: where we want the output file to be placed via the <cite>out_dir</cite> parameter, we will ensure that our simulation is easily reproducible by setting the random <cite>seed</cite> parameter, and we can examine what is the effect of a high fraction of bedload with the <cite>f_bedload</cite> parameter.
 Enter the following in your text editor, and save the file as <code class="docutils literal notranslate"><span class="pre">10min_tutorial.yaml</span></code>, making sure to place the file in a location accessible to your interpreter.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">out_dir</span><span class="p">:</span> <span class="s">&#39;10min_tutorial&#39;</span>
-<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">451220118313</span>
-<span class="nt">f_bedload</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.9</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">out_dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;10min_tutorial&#39;</span><span class="w"></span>
+<span class="nt">seed</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">451220118313</span><span class="w"></span>
+<span class="nt">f_bedload</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.9</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Now, we can create a second instance of the <a class="reference internal" href="../_autosummary/pyDeltaRCM.model.DeltaModel.html#pyDeltaRCM.model.DeltaModel" title="pyDeltaRCM.model.DeltaModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DeltaModel()</span></code></a>, this time using the input yaml file.</p>
@@ -120,7 +121,7 @@ Enter the following in your text editor, and save the file as <code class="docut
 </div>
 </section>
 <section id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">¶</a></h2>
 <p>Consider reading through the <a class="reference internal" href="user_guide.html"><span class="doc">User Guide</span></a> as a first action, and determine how to set up the model to complete your experiment, including tutorials and examples for customizing the model to achieve any arbitrary behavior you need!</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="user_guide.html"><span class="doc">User Guide</span></a></p></li>
@@ -136,8 +137,9 @@ Enter the following in your text editor, and save the file as <code class="docut
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">10-minute tutorial</a><ul>
 <li><a class="reference internal" href="#a-default-model">A default model</a></li>
 <li><a class="reference internal" href="#the-model-with-set-parameters">The model with set parameters</a></li>
@@ -146,12 +148,17 @@ Enter the following in your text editor, and save the file as <code class="docut
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="getting_started.html"
-                        title="previous chapter">Getting Started</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="user_guide.html"
-                        title="next chapter">User Guide</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="getting_started.html"
+                          title="previous chapter">Getting Started</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="user_guide.html"
+                          title="next chapter">User Guide</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -168,7 +175,7 @@ Enter the following in your text editor, and save the file as <code class="docut
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -185,14 +192,14 @@ Enter the following in your text editor, and save the file as <code class="docut
         <li class="right" >
           <a href="getting_started.html" title="Getting Started"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.0.3 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pyDeltaRCM 2.1.4 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="getting_started.html" >Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">10-minute tutorial</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, The DeltaRCM Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
   </body>
 </html>
